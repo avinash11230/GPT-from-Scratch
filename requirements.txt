@@ -1,1 +1,5 @@
 torch>=2.0.0
+pyyaml>=6.0
+tensorboard>=2.13
+gradio>=4.0
+pytest>=7.4

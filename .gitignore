@@ -1,4 +1,22 @@
 __pycache__/
 *.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+# Checkpoints (large binaries)
 checkpoints/*.pt
 checkpoints/*.json
+
+# TensorBoard logs
+runs/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
