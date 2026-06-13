@@ -1,0 +1,32 @@
+# configs/tiny.yaml
+# ─────────────────────────────────────────────────────────────────────────────
+# "Tiny" preset — smallest model, fastest to train on CPU.
+# Useful for quick experiments, testing, and ablations.
+#
+# Approx parameter count (with weight tying):
+#   ~0.2 M parameters
+# Rough training time:
+#   CPU:  ~5–10 min for 3 000 steps
+#   GPU:  ~1–2 min
+# ─────────────────────────────────────────────────────────────────────────────
+
+model:
+  block_size: 128
+  n_embd: 64
+  n_head: 2
+  n_layer: 2
+  dropout: 0.0
+  weight_tying: true
+
+train:
+  steps: 3000
+  batch_size: 32
+  accum_steps: 1
+  lr: 1.0e-3
+  min_lr: 1.0e-4
+  warmup_steps: 50
+  grad_clip: 1.0
+  eval_interval: 300
+  save_interval: 1000
+  sample_interval: 300
+  tokenizer: char

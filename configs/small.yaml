@@ -1,0 +1,32 @@
+# configs/small.yaml
+# ─────────────────────────────────────────────────────────────────────────────
+# "Small" preset — default config, matches the original bare-bones model.
+# Good balance of quality and training speed.
+#
+# Approx parameter count (with weight tying):
+#   ~1.2 M parameters
+# Rough training time:
+#   CPU:  ~20–40 min for 5 000 steps
+#   GPU:  ~3–6 min
+# ─────────────────────────────────────────────────────────────────────────────
+
+model:
+  block_size: 256
+  n_embd: 128
+  n_head: 4
+  n_layer: 4
+  dropout: 0.1
+  weight_tying: true
+
+train:
+  steps: 5000
+  batch_size: 64
+  accum_steps: 1
+  lr: 3.0e-4
+  min_lr: 3.0e-5
+  warmup_steps: 100
+  grad_clip: 1.0
+  eval_interval: 500
+  save_interval: 1000
+  sample_interval: 500
+  tokenizer: char
