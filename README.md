@@ -6,7 +6,7 @@ is hand-written and documented so you can read the code and understand exactly
 what it's doing.
 
 Trained on Tiny Shakespeare with either a character-level tokenizer or a
-from-scratch Byte-Pair Encoding (BPE) tokenizer, all implemented in this repo.
+from-scratch Byte-Pair Encoding (BPE) tokenizer, all implemented in this repository.
 
 ---
 
